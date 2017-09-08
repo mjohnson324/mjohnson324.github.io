@@ -13,9 +13,22 @@
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
 
-		p {
-			font-size: 1.25em;
+		div {
+			white-space: nowrap;
+		}
 
+		img {
+			border-radius: 40%;
+			height: 300px;
+			vertical-align: top;
+		}
+
+		p {
+			white-space: normal;
+			margin-left: 30px;
+			width: 500px;
+			font-size: 1em;
+			display: inline-block;
 			@include breakpoint(medium) {
 				br {
 					display: none;
