@@ -15,17 +15,20 @@
 		margin: 0 0 _size(element-margin) 0;
 
 		section {
-			@include padding(3em, 3em, (0.5em, 0, 0, 4em));
-			width: 50%;
-			border-top: solid 1px _palette(border);
+			@include padding(0, 1em, (1em, 1em, 1em, 1em));
+			width: calc(100%  / 6);
+			border-top: solid 1px _palette(accent3);
+			border-right: solid 1px _palette(accent3);
 			position: relative;
+			background-color: white;
 
-			&:nth-child(-n + 2) {
-				border-top-width: 0;
+			span {
+				font-size: 100px;
 			}
 
-			&:nth-child(2n) {
-				border-left: solid 1px _palette(border);
+			img {
+				width: 100px;
+				height: 100px;
 			}
 
 			.icon {
