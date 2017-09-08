@@ -33,6 +33,15 @@
 
 		&.style1 {
 			background-color: _palette(accent1);
+
+			ul {
+				display: flex;
+				justify-content: space-around;
+
+				li {
+					margin: 0;
+				}
+			}
 		}
 
 		&.style1-alt {
@@ -136,4 +145,12 @@
 				}
 			}
 		}
+	}
+
+	.contacts {
+		font-size: 20px;
+	}
+
+	.social-media {
+		font-size: 80px;
 	}
