@@ -26,11 +26,6 @@
 				font-size: 100px;
 			}
 
-			img {
-				width: 100px;
-				height: 100px;
-			}
-
 			.icon {
 				@include vendor('transition', (
 					'opacity #{_duration(activation) * 0.5} ease',
