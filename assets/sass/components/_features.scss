@@ -16,7 +16,7 @@
 
 		section {
 			@include padding(0, 1em, (1em, 1em, 1em, 1em));
-			width: calc(100%  / 6);
+			width: calc(100%  / 5);
 			border-top: solid 1px _palette(accent3);
 			border-right: solid 1px _palette(accent3);
 			position: relative;

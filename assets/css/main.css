@@ -1994,7 +1994,7 @@ button:hover:active:after,
 }
 .features section {
   padding: 1em 2em 0.1em 2em;
-  width: calc(100% / 6);
+  width: calc(100% / 5);
   border-top: solid 1px #5e42a6;
   border-right: solid 1px #5e42a6;
   position: relative;
@@ -3563,4 +3563,4 @@ body.is-loading #sidebar nav ul li {
   }
 }
 
-/*# sourceMappingURL=css/main.css.map */
+/*# sourceMappingURL=assets/css/main.css.map */
