@@ -3527,7 +3527,7 @@ body.is-loading #sidebar nav ul li {
 /* Intro */
 #intro {
   background-attachment: fixed;
-  background-image: url("images/intro.svg");
+  background-image: url("../images/intro.svg");
   background-position: top right;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -3563,4 +3563,4 @@ body.is-loading #sidebar nav ul li {
   }
 }
 
-/*# sourceMappingURL=assets/css/main.css.map */
+/*# sourceMappingURL=css/main.css.map */
