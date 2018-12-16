@@ -4,10 +4,8 @@ const ctx = canvas.getContext("2d");
 function sizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  ctx.fillStyle = "red";
+  ctx.fillStyle = "rgba(0, 195, 228)";
   ctx.fillRect(0,0, canvas.width, canvas.height);
-  ctx.fillStyle = " blue";
-  ctx.fillText("Hi", canvas.width / 2, canvas.height / 2);
 }
 
 sizeCanvas();

@@ -1,0 +1,14 @@
+#skills {
+	h2 {
+		font-size: 36px;
+	}
+
+	#skills-wrapper {
+		display: flex;
+
+		.skill-icons {
+			width: 100px;
+			height: 100px;
+		}
+	}
+}

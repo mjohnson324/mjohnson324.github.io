@@ -1,0 +1,16 @@
+#header {
+	background-color: _palette(accent1);
+	padding: 1.75em 2em;
+
+	nav {
+		a {
+			border: 0;
+			color: white;
+			display: inline-block;
+			font-size: 0.6em;
+			&:hover {
+				color: red;
+			}
+		}
+	}
+}

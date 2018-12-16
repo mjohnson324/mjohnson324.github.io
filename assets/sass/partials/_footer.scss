@@ -1,0 +1,10 @@
+#footer {
+	nav {
+		a {
+			border-bottom-color: _palette(border);
+			&:hover {
+				border-bottom-color: transparent;
+			}
+		}
+	}
+}
