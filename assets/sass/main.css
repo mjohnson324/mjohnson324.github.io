@@ -1,25 +1,3 @@
-* {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  font-family: sans-serif;
-  color: inherit;
-  text-align: inherit;
-  text-decoration: inherit;
-  cursor: default;
-}
-
-ul {
-  list-style: none;
-}
-
-html, body {
-  height: 100%;
-}
-
 .button {
   border-radius: 3em;
   display: inline-block;
@@ -36,16 +14,16 @@ html, body {
 }
 
 #header {
-  background-color: _palette(accent1);
+  background-color: #2a2ca5;
   padding: 1.75em 2em;
 }
-#header nav a {
+#header a {
   border: 0;
   color: white;
   display: inline-block;
   font-size: 0.6em;
 }
-#header nav a:hover {
+#header a:hover {
   color: red;
 }
 
