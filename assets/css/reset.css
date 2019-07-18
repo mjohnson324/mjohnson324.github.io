@@ -5,7 +5,6 @@
     border: 0;
     font-size: 100%;
     font: inherit;
-    font-family: sans-serif;
     color: inherit;
     text-align: inherit;
     text-decoration: inherit;
@@ -19,3 +18,18 @@ ul {
 html, body {
     height: 100%;
 }
+
+ /* Arial, Helvetica, sans-serif */
+ /* 'Courier New', monospace */
+
+ /* #00C3E4 turquoise */
+ /* #2A2CA5 purple-one */
+ /* #312450 purple-two */
+ /* #FFF border color */
+
+ /* 1680px */
+ /* 1280px */
+ /* 980px */
+ /* 736px */
+ /* 480px */
+ /* 360px */
