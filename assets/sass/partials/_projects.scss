@@ -1,0 +1,19 @@
+#projects {
+	margin: 0 0 0 0;
+	padding-left: 1em;
+
+	.project {
+		padding-left: 0.5em;
+
+		.content {
+			h2: {
+				font-size: 30px;
+			}
+		}
+	}
+
+	.screenshot {
+		max-height: 300px;
+		max-width: 300px;
+	}
+}

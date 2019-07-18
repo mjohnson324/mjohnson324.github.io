@@ -1,0 +1,20 @@
+#header {
+	background-color: $purple_one;
+
+	h1 {
+		color: white;
+		font-size: 40px;
+	}
+
+	a {
+		border: 1px solid white;
+		color: white;
+		font-size: 60px;
+		margin: 10px;
+
+		:hover {
+			cursor: pointer;
+			background-color: $light;
+		}
+	}
+}
