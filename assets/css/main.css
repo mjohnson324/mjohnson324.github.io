@@ -1,4 +1,28 @@
-@import 'reset.css';
+ /* #00C3E4 turquoise */
+ /* #2A2CA5 purple-one */
+ /* #312450 purple-two */
+ /* #FFF border color */
+
+* {
+    font-family: Montserrat, "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    color: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    cursor: default;
+}
+
+ul {
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+}
 
 .button {
 	border-radius: 3em;
