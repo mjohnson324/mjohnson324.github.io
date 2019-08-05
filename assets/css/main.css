@@ -3,14 +3,15 @@
  /* #312450 purple-two */
  /* #FFF border color */
 
+/* Base */
 * {
-    font-family: Montserrat, "Open Sans", sans-serif;
+	font-family: "Montserrat", "Open Sans", sans-serif;
+	color: #fff;
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
-    color: inherit;
     text-align: inherit;
     text-decoration: inherit;
     cursor: default;
@@ -24,87 +25,103 @@ html, body {
     height: 100%;
 }
 
-.button {
-	border-radius: 3em;
-	display: inline-block;
-	font-size: 0.8em;
-	font-weight: bold;
-	height: calc(4.75em + 2px);
-	line-height: 4.75em;
-	padding: 0 3.75em;
-	text-align: center;
-	white-space: nowrap;
-}
-
-button:hover:active {
-	border-color: white;
-}
-
-#canvas {
-    position: absolute;
-    z-index: -1;
-}
-
-#footer nav a {
-	border-bottom-color: #FFF;
-}
-
-#skills h2 {
+h1 {
 	font-size: 36px;
 }
 
-#skills #skills-wrapper {
-	display: flex;
+h2 {
+	font-size: 30px;
 }
 
-#skills #skills-wrapper .skill-icons {
+h3 {
+	font-size: 24px;
+}
+
+p {
+
+} /* #00C3E4 turquoise */
+/* #2A2CA5 purple-one */
+/* #312450 purple-two */
+/* #FFF border color */
+
+/* header */
+#head {
+	background-color: #312450;
+}
+
+#logo {
+
+}
+
+#navigation {
+
+}
+
+/* about me */
+#about-me {
+
+}
+
+#my-photo {
+
+}
+
+/* skills */
+#skills {
+
+}
+
+#skills-wrapper {
+	display: grid;
+}
+
+.skill-icons {
 	width: 100px;
 	height: 100px;
 }
 
+/* projects */
 #projects {
-	margin: 0;
-	padding-left: 1em;
+
 }
 
-#projects .project {
-	padding-left: 0.5em;
+.project {
+
 }
 
-#projects .project .content h2 {
-	font-size: 30px;
-}
-
-#projects .screenshot {
+.screenshot {
 	max-height: 300px;
 	max-width: 300px;
 }
 
-#intro p {
-	white-space: normal;
-	margin-left: 30px;
-	width: 500px;
-	font-size: 1em;
-	display: inline-block;
+.content {
+
 }
 
-#header {
-	background-color: #fff;
+/* highlights */
+#highlights {
+
 }
 
-#header h1 {
-	color: white;
-	font-size: 40px;
+/* contact */
+#contact {
+
 }
 
-#header a {
+.button {
 	border: 1px solid white;
-	color: white;
-	font-size: 60px;
-	margin: 10px;
+	border-radius: 5px;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	height: 40px;
+	line-height: 30px;
+	padding: 5px;
+	text-align: center;
+	white-space: nowrap;
+	background-color: #2a2ca2;
 }
 
-#header a:hover {
-	cursor: pointer;
-	background-color: #fff;
+button:hover {
+	background-color: rgba(42, 44, 162, 0.5);
 }
