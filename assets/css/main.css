@@ -5,7 +5,7 @@
 
 /* Base */
 * {
-	font-family: "Montserrat", "Open Sans", sans-serif;
+	font-family: 'Open Sans', sans-serif !important;
 	color: #fff;
     margin: 0;
     padding: 0;
@@ -25,16 +25,12 @@ html, body {
     height: 100%;
 }
 
-h1 {
-	font-size: 36px;
-}
-
 h2 {
-	font-size: 30px;
+	font-size: 24px;
 }
 
 h3 {
-	font-size: 24px;
+	font-size: 20px;
 }
 
 p {
@@ -50,11 +46,21 @@ p {
 }
 
 #logo {
-
+	height: 80px;
+	width: 80px;
+	margin: 20px 0 0 20px;
 }
 
-#navigation {
+h1 {
+	font-size: 32px;
+	display: inline-block;
+	margin: 10px;
+	width: 55%;
+}
 
+#page-tabs a {
+	display: block;
+	text-align: center;
 }
 
 /* about me */
@@ -63,7 +69,11 @@ p {
 }
 
 #my-photo {
-
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
 }
 
 /* skills */
@@ -110,8 +120,7 @@ p {
 
 .button {
 	border: 1px solid white;
-	border-radius: 5px;
-	display: inline-block;
+	border-radius: 30px;
 	font-size: 16px;
 	font-weight: bold;
 	height: 40px;
@@ -123,5 +132,5 @@ p {
 }
 
 button:hover {
-	background-color: rgba(42, 44, 162, 0.5);
+	background-color: #00c3e4;
 }
