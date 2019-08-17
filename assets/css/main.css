@@ -39,10 +39,7 @@ h3 {
 
 p {
 
-} /* #00C3E4 turquoise */
-/* #2A2CA5 purple-one */
-/* #312450 purple-two */
-/* #FFF border color */
+}
 
 /* header */
 #head {
@@ -66,12 +63,13 @@ h1 {
 	margin-left: 20px;
 }
 
-#page-tabs a {
-	display: block;
+.nav-tabs {
 	text-align: center;
 	padding: 5px;
 	border-top: 1px dotted white;
 }
+
+.
 
 #menu-button {
 	position: relative;
