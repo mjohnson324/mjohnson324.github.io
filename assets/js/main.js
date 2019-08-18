@@ -13,39 +13,28 @@ const menuButton = document.getElementById("menu-button");
 menuButton.tabbed = false;
 menuButton.addEventListener("click", activateTabs);
 
-function activateTabs() {
+function activateTabs(e) {
+  e.preventDefault();
   if (menuButton.tabbed === false) {
-    addTabs();
+    displayTabs();
   } else {
-    removeTabs();
-    menuButton.tabbed = true;
+    hideTabs();
   }
   menuButton.tabbed = !menuButton.tabbed;
 }
 
-function addTabs() {
-  const tabs = [
-    { destination: "#skills", text: "Skills" },
-    { destination: "#projects", text: "Projects" },
-    { destination: "#contact", text: "Contact" }
-  ];
-  tabs.forEach(tab => { addTab(tab) });
+function displayTabs() {
+  const tabs = document.querySelectorAll("#page-tabs a");
+  tabs.forEach(tab => {
+    tab.addEventListener("click", hideTabs);
+    tab.classList.remove('nav-display');
+  });
 }
 
-function addTab({ destination, text }) {
-  const container = document.getElementById("page-tabs");
-  const tab = document.createElement("a");
-  tab.setAttribute("href", destination);
-  tab.innerText = text;
-  tab.addEventListener("click", removeTabs);
-  container.appendChild(tab);
-}
-
-function removeTabs() {
+function hideTabs() {
   const tabs = document.querySelectorAll("#page-tabs a");
   tabs.forEach(tab => {
     tab.removeEventListener("click", removeTabs);
-    tab.parentNode.removeChild(tab);
+    tab.classList.add('nav-display');
   });
-  menuButton.tabbed = false;
 }

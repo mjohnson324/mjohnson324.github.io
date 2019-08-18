@@ -10,7 +10,6 @@
 /* Base */
 * {
 	font-family: 'Open Sans', sans-serif !important;
-	color: #fff;
     margin: 0;
     padding: 0;
     border: 0;
@@ -43,7 +42,7 @@ p {
 
 /* header */
 #head {
-	background-color: #000080;
+
 }
 
 #logo {
@@ -66,10 +65,12 @@ h1 {
 .nav-tabs {
 	text-align: center;
 	padding: 5px;
-	border-top: 1px dotted white;
+	border-top: 1px dotted;
 }
 
-.
+.nav-display {
+	display: none;
+}
 
 #menu-button {
 	position: relative;
@@ -79,7 +80,7 @@ h1 {
 
 /* about me */
 #about-me {
-	background-color: #e8e8ee;
+
 }
 
 #my-photo {
@@ -133,7 +134,7 @@ h1 {
 }
 
 .button {
-	border: 1px solid white;
+	border: 1px solid;
 	border-radius: 30px;
 	font-size: 16px;
 	font-weight: bold;
@@ -142,9 +143,9 @@ h1 {
 	padding: 10px;
 	text-align: center;
 	white-space: nowrap;
-	background-color: #2a2ca2;
+
 }
 
 button:hover {
-	background-color: #00c3e4;
+
 }
