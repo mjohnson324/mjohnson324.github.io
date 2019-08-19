@@ -171,12 +171,22 @@ h1 {
 
 }
 
+.content {
+
+}
+
 .screenshot {
 	max-height: 300px;
 	max-width: 300px;
+	display: block;
+	margin: 0 auto;
 }
 
-.content {
+.project-title {
+	margin: 10px 20px;
+}
+
+.project-descriptions {
 
 }
 
