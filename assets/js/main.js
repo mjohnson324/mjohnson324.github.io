@@ -17,10 +17,10 @@ function activateTabs(e) {
   e.preventDefault();
   if (menuButton.tabbed === false) {
     displayTabs();
+    menuButton.tabbed = true;
   } else {
     hideTabs();
   }
-  menuButton.tabbed = !menuButton.tabbed;
 }
 
 function displayTabs() {
@@ -34,7 +34,8 @@ function displayTabs() {
 function hideTabs() {
   const tabs = document.querySelectorAll("#page-tabs a");
   tabs.forEach(tab => {
-    tab.removeEventListener("click", removeTabs);
+    tab.removeEventListener("click", hideTabs);
     tab.classList.add('nav-display');
   });
+  menuButton.tabbed = false;
 }
