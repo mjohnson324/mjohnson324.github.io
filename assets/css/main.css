@@ -30,7 +30,7 @@ html, body {
 
 h2 {
 	font-size: 24px;
-	margin-left: 20px;
+	margin: 20px;
 }
 
 h3 {
@@ -55,10 +55,15 @@ h1 {
 	width: 55%;
 }
 
+#subtitle {
+	margin-top: 0;
+}
+
 #page-tabs {
 	position: absolute;
 	left: 0;
 	right: 0;
+	top: 100px;
 }
 
 .nav-tabs {
@@ -78,14 +83,9 @@ h1 {
 #menu-button {
 	position: relative;
 	left: 75%;
-	bottom: 30px;
 }
 
 /* about me */
-#about-me {
-
-}
-
 #my-photo {
 	height: 300px;
 	width: 300px;
@@ -95,10 +95,6 @@ h1 {
 }
 
 /* skills */
-#skills h2 {
-	margin: 20px;
-}
-
 #skills-wrapper {
 	display: grid;
 	grid-template-columns: 16% 16% 16% 16% 16% 16%;
@@ -167,8 +163,12 @@ h1 {
 	margin-top: 20px;
 }
 
-.project {
+#projects h2 {
+	margin-bottom: 0;
+}
 
+.project {
+	padding: 20px;
 }
 
 .content {
@@ -183,21 +183,17 @@ h1 {
 }
 
 .project-title {
-	margin: 10px 20px;
+	margin: 10px 0;
 }
 
 .project-descriptions {
-
-}
-
-/* highlights */
-#highlights {
-
+	margin: 20px 0;
 }
 
 /* contact */
 #contact {
-
+	height: 30px;
+	padding: 20px;
 }
 
 .button {
@@ -210,7 +206,7 @@ h1 {
 	padding: 10px;
 	text-align: center;
 	white-space: nowrap;
-
+	margin: 10px;
 }
 
 button:hover {
