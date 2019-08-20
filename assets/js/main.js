@@ -53,3 +53,39 @@ function cycleProjects(e) {
     }
   });
 }
+
+const hireButton = document.getElementById("hire");
+hireButton.addEventListener("click", showHire);
+
+function showHire(e) {
+  e.preventDefault();
+  makeModal();
+}
+
+function makeModal() {
+  const modal = document.createElement("div");
+  modal.setAttribute("id", "modal");
+  modal.addEventListener("click", removeModal);
+  const container = document.getElementsByTagName("body")[0];
+  container.appendChild(modal);
+  addLink("resume", "assets/resume/resume.pdf");
+  addLink("email", "mailto:michaelwilliamjohnson777@gmail.com");
+}
+
+function addLink(text, href) {
+  const container = document.getElementById("modal");
+  const link = document.createElement("a");
+  link.setAttribute("class", "button");
+  link.setAttribute("href", href);
+  link.innerText = text;
+  container.appendChild(link);
+}
+
+function removeModal(e) {
+  e.preventDefault();
+  const modal = document.getElementById("modal");
+  modal.removeChild(modal.children[1]);
+  modal.removeChild(modal.children[0]);
+  modal.removeEventListener("click", removeModal);
+  modal.parentNode.removeChild(modal);
+}
