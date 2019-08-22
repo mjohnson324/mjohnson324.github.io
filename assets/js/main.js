@@ -16,7 +16,7 @@ function displayTabs() {
   const tabs = document.querySelectorAll("#page-tabs a");
   tabs.forEach(tab => {
     tab.addEventListener("click", hideTabs);
-    tab.classList.remove('hidden');
+    tab.classList.remove("hidden");
   });
 }
 
@@ -24,7 +24,7 @@ function hideTabs() {
   const tabs = document.querySelectorAll("#page-tabs a");
   tabs.forEach(tab => {
     tab.removeEventListener("click", hideTabs);
-    tab.classList.add('hidden');
+    tab.classList.add("hidden");
   });
   menuButton.tabbed = false;
 }
@@ -57,6 +57,22 @@ function cycleProjects(e) {
 const hireButton = document.getElementById("hire");
 hireButton.addEventListener("click", showHire);
 
+const emailLink = document.getElementById("email");
+const resumeLink = document.getElementById("resume");
+
+function positionCareerLinks() {
+  const midWidth = window.innerWidth / 2;
+  const midHeight = window.innerHeight / 2;
+  const emailMidPoint = emailLink.offsetWidth / 2;
+  const resumeMidPoint = resumeLink.offsetWidth / 2;
+  emailLink.style.left = `${midWidth}px`;
+  emailLink.style.marginLeft = `-${emailMidPoint}px`;
+  emailLink.style.bottom = `${midHeight}px`;
+  resumeLink.style.left = `${midWidth}px`;
+  resumeLink.style.marginLeft = `-${resumeMidPoint}px`;
+  resumeLink.style.top = `${midHeight}px`;
+}
+
 function showHire(e) {
   e.preventDefault();
   makeModal();
@@ -68,24 +84,16 @@ function makeModal() {
   modal.addEventListener("click", removeModal);
   const container = document.getElementsByTagName("body")[0];
   container.appendChild(modal);
-  addLink("resume", "assets/resume/resume.pdf");
-  addLink("email", "mailto:michaelwilliamjohnson777@gmail.com");
-}
-
-function addLink(text, href) {
-  const container = document.getElementById("modal");
-  const link = document.createElement("a");
-  link.setAttribute("class", "button");
-  link.setAttribute("href", href);
-  link.innerText = text;
-  container.appendChild(link);
+  emailLink.classList.remove("hidden");
+  resumeLink.classList.remove("hidden");
+  positionCareerLinks();
 }
 
 function removeModal(e) {
   e.preventDefault();
   const modal = document.getElementById("modal");
-  modal.removeChild(modal.children[1]);
-  modal.removeChild(modal.children[0]);
   modal.removeEventListener("click", removeModal);
   modal.parentNode.removeChild(modal);
+  emailLink.classList.add("hidden");
+  resumeLink.classList.add("hidden");
 }

@@ -1,14 +1,25 @@
-.dark-primary-color    { background: #303F9F; }
-.default-primary-color { background: #3F51B5; }
-.light-primary-color   { background: #C5CAE9; }
-.text-primary-color    { color: #FFFFFF; }
-.accent-color          { background: #448AFF; }
-.primary-text-color    { color: #212121; }
-.secondary-text-color  { color: #757575; }
-.divider-color         { border-color: #BDBDBD; }
+/* Colors */
+.dark-primary-color    { background-color: #303F9F; }
+.default-primary-color { background-color: #3F51B5; }
+.light-primary-color   { background-color: #679fff; }
+
+.primary-text-color    { color: #FFFFFF; }
+.secondary-text-color  { color: #212121; }
+
+.button            { background-color: #679fff; }
+#modal             { background-color: #212121; }
+.nav-tabs, .button { color: #212121; }
+
+/* Borders */
+#skills, #projects { border: 2px solid #679fff; }
+.button            { border: 2px dotted #DDDDDD;}
+.nav-tabs          { border-bottom: 2px dotted #DDDDDD; }
+.tab               { border-bottom: 2px solid #3F51B5; }
+.hidden-border     { border-bottom: 2px solid #DDDDDD; }
 
 /* Base */
 * {
+	color: #FFFFFF;
     margin: 0;
     padding: 0;
     border: 0;
@@ -30,7 +41,8 @@ html, body {
 
 h2 {
 	font-size: 24px;
-	margin: 20px;
+	margin: 0 0 20px 20px;
+	padding-top: 20px;
 }
 
 h3 {
@@ -55,61 +67,62 @@ h1 {
 	width: 55%;
 }
 
-#modal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	opacity: 0.5;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-}
-
 #subtitle {
-	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0 0 20px 0;
 }
 
 #page-tabs {
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 100px;
+	top: 90px;
 }
 
 .nav-tabs {
 	text-align: center;
 	padding: 5px;
-	border-top: 1px dotted;
 	display: block;
-}
-
-.hidden {
-	display: none;
 }
 
 #menu-button {
 	position: relative;
 	left: 75%;
+	bottom: 10px;
 }
 
 /* about me */
+#about-me {
+	padding-bottom: 10px;
+}
+
+#about-me:last-child {
+	margin-bottom: 0;
+}
+
 #my-photo {
 	height: 300px;
 	width: 300px;
 	border-radius: 50%;
 	display: block;
-	margin: 20px auto;
+	margin: auto;
+	padding-top: 20px;
 }
 
 /* skills */
+#skills {
+	padding: 10px 0;
+}
+
+#skills h2 {
+	margin-top: 0;
+}
+
 #skills-wrapper {
 	display: grid;
 	grid-template-columns: 16% 16% 16% 16% 16% 16%;
 	grid-template-rows: 100px 100px 100px 100px;
 	grid-row-gap: 10px;
-	margin-bottom: 20px;
 }
 
 #item-1 {
@@ -168,10 +181,6 @@ h1 {
 }
 
 /* projects */
-#projects {
-	margin-top: 20px;
-}
-
 #project-tabs {
 	margin-left: 20px;
 }
@@ -200,10 +209,28 @@ h1 {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	padding-bottom: 10px;
+	padding: 10px;
 }
 
+/* Hiring */
+#modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+#resume, #email {
+	position: fixed;
+	z-index: 2;
+}
+
+/* Universal */
 .button {
-	border: 1px solid;
 	border-radius: 30px;
 	font-size: 16px;
 	font-weight: bold;
@@ -214,18 +241,18 @@ h1 {
 	margin: 10px;
 }
 
+button:hover {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.hidden {
+	display: none;
+}
+
 .tab {
 	font-size: 16px;
 	font-weight: bold;
 	padding: 10px;
 	text-align: center;
-}
-
-.hidden-border {
-	border-bottom: 1px solid;
-}
-
-button:hover {
-	cursor: pointer;
-	cursor: hand;
 }
