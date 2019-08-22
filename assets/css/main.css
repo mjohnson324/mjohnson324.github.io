@@ -51,44 +51,64 @@ h3 {
 
 p {
 	margin: 10px 20px;
+	max-width: 500px;
 }
 
 /* header */
+#head {
+	display: grid;
+	grid-template-rows: 100px 60px;
+	grid-template-columns: 25% 25% 25% 25%;
+}
+
+#head img {
+	grid-row-start: 1;
+	grid-column-start: 1;
+}
+
+#head h1 {
+	grid-row-start: 1;
+	grid-column-start: 2;
+	grid-column-end: 5;
+}
+
+#head h2 {
+	grid-row-start: 2;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	padding-top: 10px;
+	margin-left: 20px;
+}
+
+#head button {
+	grid-row-start: 2;
+	grid-column-start: 4;
+	line-height: 20px;
+}
+
 #logo {
 	height: 80px;
 	width: 80px;
-	margin: 20px 0 0 20px;
+	margin: 10px 0 0 10px;
 }
 
 h1 {
 	font-size: 32px;
-	display: inline-block;
 	margin: 10px;
-	width: 55%;
-}
-
-#subtitle {
-	margin-bottom: 0;
-	padding: 0 0 20px 0;
+	margin-left: 20px;
 }
 
 #page-tabs {
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 90px;
+	top: 160px;
 }
 
 .nav-tabs {
 	text-align: center;
 	padding: 5px;
 	display: block;
-}
-
-#menu-button {
-	position: relative;
-	left: 75%;
-	bottom: 10px;
 }
 
 /* about me */
