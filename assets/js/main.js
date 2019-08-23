@@ -47,9 +47,16 @@ function cycleProjects(e) {
     if (button.id === currentID && classes.contains("hidden-border")) {
       button.classList.remove("hidden-border");
       project.classList.remove("hidden");
+      if (window.innerWidth >= 630) {
+        project.classList.add("project-grid");
+      }
+      project.classList.add("project-grid");
     } else if (button.id !== currentID && classes.contains("hidden-border") === false) {
       button.classList.add("hidden-border");
       project.classList.add("hidden");
+      if (project.classList.contains("project-grid")) {
+        project.classList.remove("project-grid");
+      }
     }
   });
 }
