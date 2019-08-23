@@ -57,23 +57,25 @@ p {
 /* header */
 #head {
 	display: grid;
-	grid-template-rows: 100px 60px;
+	grid-template-rows: 50px 50px 60px;
 	grid-template-columns: 25% 25% 25% 25%;
 }
 
 #head img {
 	grid-row-start: 1;
+	grid-row-end: 3;
 	grid-column-start: 1;
 }
 
 #head h1 {
 	grid-row-start: 1;
+	grid-row-end: 3;
 	grid-column-start: 2;
 	grid-column-end: 5;
 }
 
 #head h2 {
-	grid-row-start: 2;
+	grid-row-start: 3;
 	grid-column-start: 1;
 	grid-column-end: 4;
 	padding-top: 10px;
@@ -81,7 +83,7 @@ p {
 }
 
 #head button {
-	grid-row-start: 2;
+	grid-row-start: 3;
 	grid-column-start: 4;
 	line-height: 20px;
 }
@@ -116,10 +118,6 @@ h1 {
 	padding-bottom: 10px;
 }
 
-#about-me:last-child {
-	margin-bottom: 0;
-}
-
 #my-photo {
 	height: 300px;
 	width: 300px;
@@ -140,8 +138,8 @@ h1 {
 
 #skills-wrapper {
 	display: grid;
-	grid-template-columns: 16% 16% 16% 16% 16% 16%;
-	grid-template-rows: 100px 100px 100px 100px;
+	grid-template-columns: 20% 20% 20% 20% 20%;
+	grid-template-rows: 70px 70px 70px 70px;
 	grid-row-gap: 10px;
 }
 
@@ -153,6 +151,7 @@ h1 {
 #item-2 {
 	grid-column-start: 3;
 	grid-row-start: 1;
+	justify-self: center;
 }
 
 #item-3 {
@@ -163,11 +162,13 @@ h1 {
 #item-4 {
 	grid-column-start: 2;
 	grid-row-start: 2;
+	justify-self: center;
 }
 
 #item-5 {
 	grid-column-start: 4;
 	grid-row-start: 2;
+	justify-self: center;
 }
 
 #item-6 {
@@ -178,6 +179,7 @@ h1 {
 #item-7 {
 	grid-column-start: 3;
 	grid-row-start: 3;
+	justify-self: center;
 }
 
 #item-8 {
@@ -188,16 +190,18 @@ h1 {
 #item-9 {
 	grid-column-start: 2;
 	grid-row-start: 4;
+	justify-self: center;
 }
 
 #item-10 {
 	grid-column-start: 4;
 	grid-row-start: 4;
+	justify-self: center;
 }
 
 .skill-icons {
-	width: 100px;
-	height: 100px;
+	width: 70px;
+	height: 70px;
 }
 
 /* projects */
@@ -222,6 +226,7 @@ h1 {
 
 .project-descriptions {
 	margin: 20px 0;
+	height: 50px;
 }
 
 /* contact */
@@ -275,4 +280,47 @@ button:hover {
 	font-weight: bold;
 	padding: 10px;
 	text-align: center;
+}
+
+/* media */
+@media screen and (min-width: 450px) {
+	#head h1 {
+		grid-row-end: 2;
+	}
+
+	#head h2 {
+		grid-row-start: 2;
+		grid-column-start: 2;
+		grid-column-end: 5;
+	}
+
+	#menu-button, #hire {
+		display: none;
+	}
+
+	#page-tabs {
+		position: static;
+		grid-row-start: 3;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.nav-tabs {
+		padding: 5px;
+		display: block;
+		border-radius: 15px;
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	#skills-tab, #projects-tab, #contact-tab, #resume, #email {
+		display: inline-block;
+	}
+
+	#resume, #email {
+		position: static;
+	}
 }
