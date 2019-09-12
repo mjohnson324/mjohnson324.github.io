@@ -312,9 +312,9 @@ button:hover {
 	}
 
 	.nav-tabs {
-		padding: 5px;
+		padding: 10px;
 		display: block;
-		border-radius: 15px;
+		border-radius: 20px;
 		font-size: 16px;
 		font-weight: bold;
 	}
@@ -325,6 +325,7 @@ button:hover {
 
 	#resume, #email {
 		position: static;
+		margin: 10px;
 	}
 }
 
@@ -426,4 +427,46 @@ button:hover {
 		grid-column-start: 2;
 		justify-self: center;
 	}
+
+	#page-tabs {
+		display: none;
+	}
+
+	#head {
+		grid-template-rows: 50px 50px;
+		grid-template-columns: 100px calc(100% - 100px);
+	}
+
+	#head img {
+		grid-row-start: 1;
+		grid-column-start: 1;
+	}
+
+	#head h1 {
+		grid-row-start: 1;
+		grid-column-start: 2;
+	}
+
+	#head h2 {
+		grid-row-start: 2;
+		grid-column-start: 2;
+	}
+}
+
+@media screen and (min-width: 720px) {
+	#contact {
+		justify-content: center;
+	}
+
+	#contact a {
+		margin: 10px 20px;
+	}
+
+	#about-me h2 {
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 901px) {
+
 }
