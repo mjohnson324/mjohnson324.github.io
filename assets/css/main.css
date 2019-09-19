@@ -510,3 +510,27 @@ button:hover {
 		justify-self: start;
 	}
 }
+
+@media screen and (min-width: 1200px) {
+	#skills-wrapper {
+		grid-template-columns: 30% 15% 10% 15% 30%;
+	}
+
+	#item-1, #item-6 {
+		justify-self: end;
+	}
+
+	#item-3, #item-8 {
+		justify-self: start;
+	}
+
+	.screenshot-wrapper {
+		justify-self: end;
+		margin: 0 20px;
+	}
+
+	.project-links {
+		justify-self: start;
+		margin-left: 20px;
+	}
+}
