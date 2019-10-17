@@ -32,7 +32,8 @@ function hideTabs() {
 const mockdoc = document.getElementById("mockdoc-tab");
 const blockhead = document.getElementById("blockhead-tab");
 const rdcover = document.getElementById("rdcover-tab");
-const tabButtons = [mockdoc, blockhead, rdcover];
+const restCountries = document.getElementById("restCountries-tab");
+const tabButtons = [mockdoc, blockhead, rdcover, restCountries];
 tabButtons.forEach(button => {
   button.addEventListener("click", cycleProjects);
 });
@@ -59,48 +60,4 @@ function cycleProjects(e) {
       }
     }
   });
-}
-
-const hireButton = document.getElementById("hire");
-hireButton.addEventListener("click", showHire);
-
-const emailLink = document.getElementById("email");
-const resumeLink = document.getElementById("resume");
-
-function positionCareerLinks() {
-  const midWidth = window.innerWidth / 2;
-  const midHeight = window.innerHeight / 2;
-  const emailMidPoint = emailLink.offsetWidth / 2;
-  const resumeMidPoint = resumeLink.offsetWidth / 2;
-  emailLink.style.left = `${midWidth}px`;
-  emailLink.style.marginLeft = `-${emailMidPoint}px`;
-  emailLink.style.bottom = `${midHeight}px`;
-  resumeLink.style.left = `${midWidth}px`;
-  resumeLink.style.marginLeft = `-${resumeMidPoint}px`;
-  resumeLink.style.top = `${midHeight}px`;
-}
-
-function showHire(e) {
-  e.preventDefault();
-  makeModal();
-}
-
-function makeModal() {
-  const modal = document.createElement("div");
-  modal.setAttribute("id", "modal");
-  modal.addEventListener("click", removeModal);
-  const container = document.getElementsByTagName("body")[0];
-  container.appendChild(modal);
-  emailLink.classList.remove("hidden");
-  resumeLink.classList.remove("hidden");
-  positionCareerLinks();
-}
-
-function removeModal(e) {
-  e.preventDefault();
-  const modal = document.getElementById("modal");
-  modal.removeEventListener("click", removeModal);
-  modal.parentNode.removeChild(modal);
-  emailLink.classList.add("hidden");
-  resumeLink.classList.add("hidden");
 }
