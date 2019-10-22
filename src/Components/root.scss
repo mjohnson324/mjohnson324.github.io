@@ -1,0 +1,73 @@
+/* Base */
+* {
+	color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    cursor: default;
+}
+
+html, body, #root, #portfolio-app {
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+	font-size: 32px;
+	margin: 10px;
+	margin-left: 20px;
+}
+
+h2 {
+	font-size: 24px;
+	margin: 0 0 20px 20px;
+	padding-top: 20px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+p {
+	margin: 10px 20px;
+	max-width: 500px;
+}
+
+ul {
+    list-style: none;
+}
+
+.button {
+	border-radius: 30px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 30px;
+	padding: 10px;
+	text-align: center;
+	white-space: nowrap;
+	margin: 10px;
+}
+
+button:hover {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.hidden {
+	display: none;
+}
