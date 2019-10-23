@@ -2,6 +2,12 @@ import React from 'react';
 import './header.scss';
 import logo from './logo.png';
 
+const NAVDATA = [
+    { link: "Skills" },
+    { link: "Projects" },
+    { link: "Contact" },
+];
+
 class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -15,12 +21,11 @@ class Header extends React.Component {
     }
 
     toggleHidden() {
-        const newDisplay = !this.state.hidden;
-        this.setState({ 'hidden': newDisplay });
+        this.setState({ 'hidden': !this.state.hidden });
     }
 
     isHidden() {
-        if (this.state.hidden) { return 'hidden'; }
+        return this.state.hidden ? 'hidden' : '';
     }
 
     render() {
@@ -31,25 +36,29 @@ class Header extends React.Component {
                 <h2>Front-End Engineer</h2>
                 <button className="button" onClick={this.toggleHidden}>Menu</button>
                 <nav id="page-tabs">
-                    <a
-                        onClick={this.toggleHidden}
-                        className={`nav-tabs ${this.isHidden()} light-primary-color`}
-                        href="#skills">Skills
-                    </a>
-                    <a
-                        onClick={this.toggleHidden}
-                        className={`nav-tabs ${this.isHidden()} light-primary-color`}
-                        href="#projects">Projects
-                    </a>
-                    <a
-                        onClick={this.toggleHidden}
-                        className={`nav-tabs ${this.isHidden()} light-primary-color`}
-                        href="#contact">Contact
-                    </a>
+                    {NAVDATA.map(({ link }) => {
+                        return(
+                            <NavTab
+                                key={link}
+                                onClick={this.toggleHidden}
+                                link={link}
+                                hidden={this.isHidden()} />
+                        );
+                    })}
                 </nav>
             </header>
         );
     }
+}
+
+const NavTab = function(link, hidden) {
+    return(
+        <a
+            href={`#${link.toLowerCase()}`}
+            className={`nav-tabs ${hidden} light-primary-color`}>
+        {link}
+        </a>
+    );
 }
 
 export default Header;
