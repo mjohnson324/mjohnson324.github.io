@@ -30,7 +30,7 @@ class Header extends React.Component {
 
     render() {
         return(
-            <header id="head" className="dark-primary-color">
+            <header id="head">
                 <img id="logo" alt="site logo" src={logo} />
                 <h1>Michael W. Johnson</h1>
                 <h2>Front-End Engineer</h2>
@@ -55,7 +55,7 @@ const NavTab = function(link, hidden) {
     return(
         <a
             href={`#${link.toLowerCase()}`}
-            className={`nav-tabs ${hidden} light-primary-color`}>
+            className={`nav-tabs ${hidden}`}>
         {link}
         </a>
     );

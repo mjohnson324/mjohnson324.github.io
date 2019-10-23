@@ -1,7 +1,7 @@
 @import './Components/colors';
 
 * {
-	color: #FFFFFF;
+	color: $primary_text_color;
     margin: 0;
     padding: 0;
     border: 0;
@@ -61,6 +61,9 @@ ul {
 	text-align: center;
 	white-space: nowrap;
 	margin: 10px;
+	background-color: $light_primary_color;
+    color: $secondary_text_color;
+    border: 2px dotted $secondary_color;
 }
 
 button:hover {

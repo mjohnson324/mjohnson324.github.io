@@ -88,8 +88,8 @@ class Projects extends React.Component {
 
     render() {
         return(
-            <section id="projects" class="light-primary-color">
-                <h2 class="secondary-text-color">Projects</h2>
+            <section id="projects">
+                <h2>Projects</h2>
                 <span id="project-tabs">
                     {PROJECTS.map(({ number }) => {
                         return(
@@ -119,7 +119,7 @@ class Projects extends React.Component {
 const Project = function(data, hidden) {
     const { title, url, image, altText, description, repo } = data;
     return(
-        <li className={`project project-grid ${hidden} default-primary-color`}>
+        <li className={`project project-grid ${hidden}`}>
             <h3 className="project-title">{title}</h3>
             <a href={url} className="screenshot-wrapper" target="_blank" rel="noopener noreferrer">
                 <img src={image} className="screenshot" alt={altText} />
@@ -135,7 +135,7 @@ const Project = function(data, hidden) {
 
 const ProjectButton = function(number, hiddenBorder) {
     return(
-        <button className={`tab ${hiddenBorder} default-primary-color`}>{number}</button>
+        <button className={`tab ${hiddenBorder}`}>{number}</button>
     );
 };
 

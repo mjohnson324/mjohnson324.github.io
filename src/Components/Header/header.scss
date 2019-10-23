@@ -1,6 +1,7 @@
 @import '../colors';
 
 #head {
+	background-color: $dark_primary_color;
 	display: grid;
 	grid-template-rows: 50px 50px 60px;
 	grid-template-columns: 25% 25% 25% 25%;
@@ -50,6 +51,9 @@
 	text-align: center;
 	padding: 5px;
 	display: block;
+	border-bottom: 2px dotted $secondary_color;
+	color: $secondary_text_color;
+	background-color: $light_primary_color;
 }
 
 @media screen and (min-width: 450px) {

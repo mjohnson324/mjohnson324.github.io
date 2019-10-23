@@ -10,7 +10,7 @@ const LINKS = [
 
 const Contact = function() {
     return(
-        <footer id="contact" className="dark-primary-color">
+        <footer id="contact">
             {LINKS.map(arg => {
             return(<ContactLink
                 key={arg.altText}
@@ -23,7 +23,7 @@ const Contact = function() {
                 href="mailto:mjohnson324@gmail.com"
                 className="button"
                 alt="email">
-                <i className="far fa-envelope fa-2x secondary-text-color"></i>
+                <i className="far fa-envelope fa-2x"></i>
             </a>
         </footer>
     );
@@ -36,7 +36,7 @@ const ContactLink = function(url, altText, classText) {
            rel="noopener noreferrer"
            target="_blank"
            alt={altText}>
-           <i className={`fab ${classText} fa-2x secondary-text-color`}></i>
+           <i className={`fab ${classText} fa-2x`}></i>
         </a>
     );
 };

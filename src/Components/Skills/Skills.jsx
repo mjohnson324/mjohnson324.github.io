@@ -5,8 +5,8 @@ import './skills.scss';
 
 const Skills = function() {
     return(
-        <section id="skills" class="light-primary-color">
-            <h2 class="secondary-text-color">Skills</h2>
+        <section id="skills">
+            <h2>Skills</h2>
             <div id="skills-wrapper">
                 <Python />
                 <Ruby />

@@ -6,6 +6,11 @@
 	align-items: center;
 	padding-bottom: 10px;
 	padding: 10px;
+	background-color: $dark_primary_color;
+}
+
+.button i {
+	color: $secondary_text_color;
 }
 
 @media screen and (min-width: 720px) {

@@ -5,7 +5,7 @@ import './intro.scss';
 
 const Intro = function() {
     return(
-        <section id="about-me" className="default-primary-color">
+        <section id="about-me">
             <img id="my-photo" alt="my face" src={photo} />
             <h2>About Me</h2>
             <div className="story-wrapper">

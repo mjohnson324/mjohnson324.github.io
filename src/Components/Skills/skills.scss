@@ -2,11 +2,14 @@
 
 #skills {
 	padding: 20px 0;
+	border: 2px solid $light_primary_color; // ?
+	background-color: $light_primary_color;
 }
 
 #skills h2 {
 	margin-top: 0;
 	padding: 0;
+	color: $secondary_text_color;
 }
 
 #skills-wrapper {
