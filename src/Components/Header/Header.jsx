@@ -5,9 +5,10 @@ import logo from './logo.png';
 class Header extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             'hidden': true,
-        }
+        };
 
         this.toggleHidden = this.toggleHidden.bind(this);
         this.isHidden = this.isHidden.bind(this);
@@ -33,18 +34,18 @@ class Header extends React.Component {
                     <a
                         onClick={this.toggleHidden}
                         className={`nav-tabs ${this.isHidden()} light-primary-color`}
-                        href="#skills">
-                        Skills</a>
+                        href="#skills">Skills
+                    </a>
                     <a
                         onClick={this.toggleHidden}
                         className={`nav-tabs ${this.isHidden()} light-primary-color`}
-                        href="#projects">
-                        Projects</a>
+                        href="#projects">Projects
+                    </a>
                     <a
                         onClick={this.toggleHidden}
                         className={`nav-tabs ${this.isHidden()} light-primary-color`}
-                        href="#contact">
-                        Contact</a>
+                        href="#contact">Contact
+                    </a>
                 </nav>
             </header>
         );
