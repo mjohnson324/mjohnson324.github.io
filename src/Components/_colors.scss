@@ -1,16 +1,33 @@
 .dark-primary-color    { background-color: #303F9F; }
 .default-primary-color { background-color: #3F51B5; }
 .light-primary-color   { background-color: #ebf3ff; }
-
 .primary-text-color    { color: #FFFFFF; }
 .secondary-text-color  { color: #212121; }
 
-.nav-tabs, .button { color: #212121; }
-.button            { background-color: #ebf3ff; }
+.button {
+    background-color: #ebf3ff;
+    color: #212121;
+    border: 2px dotted #DDDDDD;
+}
 
-#skills, #projects { border: 2px solid #ebf3ff; }
-#projects 		   { border-top: 2px solid #3F51B5; }
-.button            { border: 2px dotted #DDDDDD;}
-.nav-tabs          { border-bottom: 2px dotted #DDDDDD; }
-.tab               { border-bottom: 2px solid #3F51B5; }
-.hidden-border     { border-bottom: 2px solid #DDDDDD; }
+#skills {
+    border: 2px solid #ebf3ff;
+}
+
+#projects {
+    border-top: 2px solid #3F51B5;
+    border: 2px solid #ebf3ff;
+}
+
+.nav-tabs          {
+    border-bottom: 2px dotted #DDDDDD;
+    color: #212121;
+}
+
+.tab {
+    border-bottom: 2px solid #3F51B5;
+}
+
+.hidden-border {
+    border-bottom: 2px solid #DDDDDD;
+}
