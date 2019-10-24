@@ -62,6 +62,8 @@ class Projects extends React.Component {
             } else {
                 return "hidden";
             }
+        } else if (type === "project") {
+            return "project-grid";
         }
         return "";
     }
@@ -69,10 +71,7 @@ class Projects extends React.Component {
     toggleHidden(number) {
         const { visibleProject } = this.state;
         if (number !== visibleProject) {
-            return(
-                function() {
-                    this.setState({ "visibleProject": number });
-            });
+            return(() => this.setState({ "visibleProject": number }));
         }
     }
 
@@ -97,7 +96,7 @@ class Projects extends React.Component {
                             <Project
                                 key={data.number}
                                 data={data}
-                                hidden={this.isHidden(data.number)} />
+                                hidden={this.isHidden(data.number, "project")} />
                         );
                     })}
                 </ul>
@@ -109,7 +108,7 @@ class Projects extends React.Component {
 const Project = function({ data, hidden }) {
     const { title, url, image, altText, description, repo } = data;
     return(
-        <li className={`project project-grid ${hidden}`}>
+        <li className={`project ${hidden}`}>
             <h3 className="project-title">{title}</h3>
             <a href={url} className="screenshot-wrapper" target="_blank" rel="noopener noreferrer">
                 <img src={image} className="screenshot" alt={altText} />
