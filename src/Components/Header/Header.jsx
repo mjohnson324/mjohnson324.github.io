@@ -40,7 +40,7 @@ class Header extends React.Component {
                         return(
                             <NavTab
                                 key={link}
-                                onClick={this.toggleHidden}
+                                toggle={this.toggleHidden}
                                 link={link}
                                 hidden={this.isHidden()} />
                         );
@@ -51,9 +51,10 @@ class Header extends React.Component {
     }
 }
 
-const NavTab = function(link, hidden) {
+const NavTab = function({ link, hidden, toggle }) {
     return(
         <a
+            onClick={toggle}
             href={`#${link.toLowerCase()}`}
             className={`nav-tabs ${hidden}`}>
         {link}

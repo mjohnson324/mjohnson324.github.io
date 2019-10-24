@@ -29,7 +29,7 @@ const Contact = function() {
     );
 }
 
-const ContactLink = function(url, altText, classText) {
+const ContactLink = function({ url, altText, classText }) {
     return(
         <a href={url}
            className="button"

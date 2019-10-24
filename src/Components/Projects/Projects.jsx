@@ -48,41 +48,31 @@ class Projects extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            "project1Hidden": false,
-            "project2Hidden": true,
-            "project3Hidden": true,
-            "project4HIdden": true,
-        };
+        this.state = { "visibleProject": 1 };
 
         this.isHidden = this.isHidden.bind(this);
         this.toggleHidden = this.toggleHidden.bind(this);
     }
 
     isHidden(number, type) {
-        const hidden = this.state[`project${number}Hidden`];
-        if (hidden) {
+        const { visibleProject } = this.state;
+        if (number !== visibleProject) {
             if (type === "button") {
                 return "hidden-border";
             } else {
                 return "hidden";
             }
-        } else {
-            return "";
         }
+        return "";
     }
 
     toggleHidden(number) {
-        const projectHidden = this.state[`project${number}Hidden`];
-        if (projectHidden) {
-            return function() {
-                this.setState({
-                    "project1Hidden": !this.state.project1Hidden,
-                    "project2Hidden": !this.state.project2Hidden,
-                    "project3Hidden": !this.state.project3Hidden,
-                    "project4HIdden": !this.state.project4Hidden,
-                });
-            };
+        const { visibleProject } = this.state;
+        if (number !== visibleProject) {
+            return(
+                function() {
+                    this.setState({ "visibleProject": number });
+            });
         }
     }
 
@@ -97,7 +87,7 @@ class Projects extends React.Component {
                                 key={number}
                                 number={number}
                                 hiddenBorder={this.isHidden(number, "button")}
-                                onClick={this.toggleHidden(number)} />
+                                toggle={this.toggleHidden(number)} />
                         );
                     })}
                 </span>
@@ -116,7 +106,7 @@ class Projects extends React.Component {
     }
 }
 
-const Project = function(data, hidden) {
+const Project = function({ data, hidden }) {
     const { title, url, image, altText, description, repo } = data;
     return(
         <li className={`project project-grid ${hidden}`}>
@@ -133,9 +123,9 @@ const Project = function(data, hidden) {
     );
 };
 
-const ProjectButton = function(number, hiddenBorder) {
+const ProjectButton = function({ number, hiddenBorder, toggle }) {
     return(
-        <button className={`tab ${hiddenBorder}`}>{number}</button>
+        <button onClick={toggle} className={`tab ${hiddenBorder}`}>{number}</button>
     );
 };
 
