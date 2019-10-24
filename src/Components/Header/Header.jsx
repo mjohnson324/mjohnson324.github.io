@@ -34,7 +34,11 @@ class Header extends React.Component {
                 <img id="logo" alt="site logo" src={logo} />
                 <h1>Michael W. Johnson</h1>
                 <h2>Front-End Engineer</h2>
-                <button className="button" onClick={this.toggleHidden}>Menu</button>
+                <button
+                    id="menu-button"
+                    className="button"
+                    onClick={this.toggleHidden}>Menu
+                </button>
                 <nav id="page-tabs">
                     {NAVDATA.map(({ link }) => {
                         return(
