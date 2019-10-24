@@ -25,7 +25,7 @@ class Header extends React.Component {
     }
 
     isHidden() {
-        return this.state.hidden ? 'hidden' : '';
+        return this.state.hidden ? 'hidden' : 'nav-tabs-mobile';
     }
 
     render() {

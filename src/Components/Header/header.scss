@@ -50,10 +50,13 @@
 .nav-tabs {
 	text-align: center;
 	padding: 5px;
-	display: block;
 	border-bottom: 2px dotted $secondary_color;
 	color: $secondary_text_color;
 	background-color: $light_primary_color;
+}
+
+.nav-tabs-mobile {
+	display: block;
 }
 
 @media screen and (min-width: 450px) {
