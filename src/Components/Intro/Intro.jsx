@@ -13,7 +13,7 @@ const Intro = function() {
                     My goal as a software developer is to create life-saving applications. I see immense potential in digital health and data science to revolutionize healthcare.
                 </p>
                 <p>
-                    I'm a web developer with experiece in React and Redux, HTML/CSS, Ruby on Rails, and Python. I studied biomedical engineering at Penn State.
+                    I'm a software engineer with experiece developing applications with Python, JavaScript, React, Redux, and HTML/CSS. I studied biomedical engineering at Penn State.
                 </p>
                 <p>
                     In my spare time I enjoy salsa dancing, cooking, and rooting for my alma matter alongside my fellow alumni.

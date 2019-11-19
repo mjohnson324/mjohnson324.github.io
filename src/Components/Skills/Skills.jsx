@@ -1,5 +1,5 @@
 import React from 'react';
-import { Python, Ruby, RubyOnRails, JavaScript, ReactSVG,
+import { Python, JavaScript, ReactSVG,
          Redux, SQL, HTMLSVG, CSS, Git } from './SkillSVGs';
 import './skills.scss';
 
@@ -9,8 +9,6 @@ const Skills = function() {
             <h2>Skills</h2>
             <div id="skills-wrapper">
                 <Python />
-                <Ruby />
-                <RubyOnRails />
                 <JavaScript />
                 <ReactSVG />
                 <Redux />
