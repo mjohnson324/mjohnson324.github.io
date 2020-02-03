@@ -33,7 +33,7 @@ class Header extends React.Component {
             <header id="head">
                 <img id="logo" alt="site logo" src={logo} />
                 <h1>Michael W. Johnson</h1>
-                <h2>Front-End Engineer</h2>
+                <h2>Software Engineer</h2>
                 <button
                     id="menu-button"
                     className="button"
