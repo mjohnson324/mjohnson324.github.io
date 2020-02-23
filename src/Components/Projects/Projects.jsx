@@ -8,7 +8,6 @@ import restCountries from './project-photos/rest-countries.png';
 const PROJECTS = [
     {
         title: "MockDoc",
-        url: "https://www.mockdoc.live",
         image: mockdoc,
         altText: "MockDoc website",
         description: "A single-page web application for booking appointments with doctors.",
@@ -26,7 +25,6 @@ const PROJECTS = [
     },
     {
       title: "RDCover",
-      url: "https://github.com/mjohnson324/RDCover",
       image: rdcover,
       altText: "Ruby Data Cover ORM library",
       description: "A simple Object Relational Mapping library for interfacing with SQL databases.",
@@ -110,17 +108,24 @@ const Project = function({ data, hidden }) {
     return(
         <li className={`project ${hidden}`}>
             <h3 className="project-title">{title}</h3>
-            <a href={url} className="screenshot-wrapper" target="_blank" rel="noopener noreferrer">
-                <img src={image} className="screenshot" alt={altText} />
-            </a>
+            <img src={image} className="screenshot" alt={altText} />
             <p className="project-descriptions">{description}</p>
             <span className="project-links">
-                <a href={url} className="button" target="_blank" rel="noopener noreferrer">Live</a>
+                <LiveButton url={url} />
                 <a href={repo} className="button" target="_blank" rel="noopener noreferrer">Repo</a>
             </span>
         </li>
     );
 };
+
+const LiveButton = function({ url }) {
+    if (url !== undefined) {
+        return(
+            <a href={url} className="button" target="_blank" rel="noopener noreferrer">Live</a>
+        );
+    }
+    return null;
+}
 
 const ProjectButton = function({ number, hiddenBorder, toggle }) {
     return(
