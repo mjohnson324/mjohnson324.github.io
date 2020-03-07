@@ -24,21 +24,13 @@ const PROJECTS = [
       number: 2
     },
     {
-      title: "RDCover",
-      image: rdcover,
-      altText: "Ruby Data Cover ORM library",
-      description: "A simple Object Relational Mapping library for interfacing with SQL databases.",
-      repo: "https://github.com/mjohnson324/RDCover",
-      number: 3
-    },
-    {
       title: "Rest Countries",
       url: "https://www.michael-w-johnson.com/rest-countries/",
       image: restCountries,
       altText: "REST Country data react app",
       description: "A simple interface for viewing data on countries provided by REST Countries.",
       repo: "https://github.com/mjohnson324/rest-countries",
-      number: 4
+      number: 3
     }
 ];
 

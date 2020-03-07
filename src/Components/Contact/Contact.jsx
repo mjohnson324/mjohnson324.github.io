@@ -4,7 +4,6 @@ import './contact.scss';
 const LINKS = [
     { url: "https://github.com/mjohnson324/", altText: "github", classText: "fa-github" },
     { url: "https://www.linkedin.com/in/mwjohnson324", altText: "linkedin", classText: "fa-linkedin-in" },
-    { url: "https://www.meetup.com/sctcio", altText: "meetup", classText: "fa-meetup" }
 ];
 
 const Contact = function() {

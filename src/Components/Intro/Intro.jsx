@@ -13,7 +13,7 @@ const Intro = function() {
                     My journey in technology started at Penn State where I studied biomedical engineering, and I continue to pursue that passion in software. My goal is to improve lives through technology. I see immense potential in digital health and data science to revolutionize healthcare.
                 </p>
                 <p>
-                    I'm a software engineer with experience developing applications with Python, JavaScript, and React.
+                    I'm a data analyst with experience coding applications with Python and JavaScript.
                 </p>
             </div>
         </section>

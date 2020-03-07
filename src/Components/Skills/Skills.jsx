@@ -1,6 +1,5 @@
 import React from 'react';
-import { Python, JavaScript, ReactSVG,
-         Redux, SQL, HTMLSVG, CSS, Git } from './SkillSVGs';
+import { Python, JavaScript, SQL, Git } from './SkillSVGs';
 import './skills.scss';
 
 const Skills = function() {
@@ -10,11 +9,7 @@ const Skills = function() {
             <div id="skills-wrapper">
                 <Python />
                 <JavaScript />
-                <ReactSVG />
-                <Redux />
                 <SQL />
-                <HTMLSVG />
-                <CSS />
                 <Git />
             </div>
         </section>
