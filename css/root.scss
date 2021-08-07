@@ -1,4 +1,8 @@
-@import './Components/colors';
+@import "./components/header";
+@import "./components/intro";
+@import "./components/skills";
+@import "./components/projects";
+@import "./components/contact";
 
 * {
 	color: $primary_text_color;
@@ -12,7 +16,7 @@
     cursor: default;
 }
 
-html, body, #root, #portfolio-app {
+html, body {
 	min-height: 100%;
 	font-family: 'Open Sans', sans-serif;
 }
