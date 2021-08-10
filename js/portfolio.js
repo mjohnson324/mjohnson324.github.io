@@ -30,5 +30,4 @@ function showProject(currentButton) {
   }
 }
 
-setupMenu();
 setupProjects();
