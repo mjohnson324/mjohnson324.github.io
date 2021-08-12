@@ -61,6 +61,12 @@
 @media screen and (min-width: 1200px) {
     #about-me {
 		grid-template-rows: 50px 330px;
+        background-color: $light_primary_color;
+        border-right: 2px solid $default_primary_color;
+    }
+
+    #about-me * {
+        color: $secondary_text_color;
     }
 
     #my-photo {
