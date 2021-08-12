@@ -1,26 +1,15 @@
-function setupProjects() {
-  const projectButtons = document.getElementsByClassName("tab");
-  for (const button of projectButtons) {
-    button.addEventListener("click", showProject);
-  }
-}
+const projectCycler = document.getElementById("projects-cycle");
+projectCycler.addEventListener("click", cycleProject);
+projectCycler["projectNumber"] = 0;
 
-function showProject(currentButton) {
-  const text = currentButton.innerText;
-  const projectButtons = document.getElementsByClassName("tab");
+function cycleProject() {
   const projects = document.getElementsByClassName("project");
+  projectCycler["projectNumber"] = (projectCycler["projectNumber"] + 1) % 3;
+  newProject = projectCycler["projectNumber"];
 
-  for (const button of projectButtons) {
-    if (button === currentButton) {
-      button.classList.remove("hidden-border");
-    } else {
-      button.classList.add("hidden-border");
-    }
-  }
-
-  for (const project of projects) {
-    projectTitle = project.firstElementChild.innerText;
-    if (projectTitle === text) {
+  for (let i = 0; i < 3; i++) {
+    project = projects[i];
+    if (i === newProject) {
       project.classList.add("project-grid");
       project.classList.remove("hidden");
     } else {
@@ -29,5 +18,3 @@ function showProject(currentButton) {
     }
   }
 }
-
-setupProjects();
