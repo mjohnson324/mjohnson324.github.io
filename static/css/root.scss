@@ -68,11 +68,7 @@ ul {
 	background-color: $light_primary_color;
     color: $secondary_text_color;
     border: 2px dotted $secondary_color;
-}
-
-button:hover {
-	cursor: pointer;
-	cursor: hand;
+    cursor: pointer;
 }
 
 .button i {

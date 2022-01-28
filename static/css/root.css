@@ -424,11 +424,7 @@ ul {
   background-color: #ebf3ff;
   color: #212121;
   border: 2px dotted #DDD;
-}
-
-button:hover {
   cursor: pointer;
-  cursor: hand;
 }
 
 .button i {
