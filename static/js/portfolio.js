@@ -4,10 +4,11 @@ projectCycler["projectNumber"] = 0;
 
 function cycleProject() {
   const projects = document.getElementsByClassName("project");
-  projectCycler["projectNumber"] = (projectCycler["projectNumber"] + 1) % 3;
+  const numProjects = projects.length
+  projectCycler["projectNumber"] = (projectCycler["projectNumber"] + 1) % numProjects;
   newProject = projectCycler["projectNumber"];
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < numProjects; i++) {
     project = projects[i];
     if (i === newProject) {
       project.classList.add("project-grid");
