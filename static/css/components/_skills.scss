@@ -13,9 +13,9 @@
     grid-row-gap: 10px;
     justify-items: center;
 	grid-template-areas:
-        ". a a . . b b ."
-        "c c . d d . e e"
-        ". f f . . g g .";
+        "b b . . c c"
+        ". . a a . ."
+        "d d . . e e";
 }
 
 .skill-icons {
@@ -43,20 +43,12 @@
 	grid-area: e;
 }
 
-#item-6 {
-	grid-area: f;
-}
-
-#item-7 {
-	grid-area: g;
-}
-
 @media screen and (min-width: 550px) {
 	#skills-wrapper {
         margin: 0 20px;
         grid-template-areas:
-            "a . b . c . d"
-            ". e . f . g .";
+            "b . a . c"
+            ". d . e .";
 	}
 }
 
